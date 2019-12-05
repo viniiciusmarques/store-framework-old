@@ -28,7 +28,7 @@
   },
   "product-brand": {
     "props": {
-      "height": "30"
+      "height": 30
     }
   },
   "flex-layout.col#right": {
