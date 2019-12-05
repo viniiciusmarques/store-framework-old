@@ -43,7 +43,7 @@
   "tab-list.item#home2": {
       "props": {
           "tabId": "electronics",
-          "label": "Electronics"
+          "label": "Instagram"
       }
   },
   "tab-content#home": {
@@ -69,10 +69,14 @@
       }
   },
   "rich-text#home2": {
+    "props": {
+    "iframe": {
       "props": {
-          "text": "Área do conteúdo da tab-list.item com  tabId = electronics",
-          "textPosition": "CENTER",
-          "font": "t-heading-3"
+        "src": " https://www.instagram.com/p/B37Zfd6FobU/embed",
+        "width": 800,
+        "heigth": 1000
       }
+    }
+  }
   }
 }
