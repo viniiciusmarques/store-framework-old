@@ -29,10 +29,9 @@
     "preventVerticalStretch": true
     }
   },
-  "flex-layout.col#right#product-price": {
+  "product-price": {
     "props": {
-      "showSavings": true,
-      "showListPrice": true
+      "showSavings": true
     }
   }
 }
