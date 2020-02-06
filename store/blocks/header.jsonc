@@ -1,15 +1,13 @@
 {
   "header.full": {
-    "blocks": [
-      "header-layout.desktop",
-      "header-layout.mobile"
-    ]
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
   },
 
   "header-layout.desktop": {
     "children": [
       "header-row#notification",
-      "header-row#main"
+      "header-row#main",
+      "header-row#menu"
     ]
   },
 
@@ -22,21 +20,11 @@
   },
 
   "header-row#notification": {
-    "children": [
-      "header-spacer",
-      "rich-text#header",
-      "header-spacer"
-    ]
+    "children": ["header-spacer", "rich-text#header", "header-spacer"]
   },
 
   "header-row#main": {
-    "children": [
-      "logo",
-      "header-spacer",
-      "search-bar",
-      "minicart",
-      "login"
-    ],
+    "children": ["logo", "header-spacer", "search-bar", "minicart", "login"],
     "props": {
       "inverted": true,
       "sticky": true,
@@ -45,39 +33,76 @@
   },
 
   "header-row#main-mobile": {
-    "children": [
-        "logo",
-        "header-spacer",
-        "minicart",
-        "login"
-    ],
+    "children": ["logo", "header-spacer", "minicart", "login"],
     "props": {
-        "inverted":true,
-        "sticky": true
-      }
+      "inverted": true,
+      "sticky": true
+    }
   },
 
   "header-row#search": {
+    "children": ["search-bar"],
+    "props": {
+      "sticky": true
+    }
+  },
+
+  "header-row#menu": {
     "children": [
-        "search-bar"
+      "header-spacer",
+      "vtex.menu@2.x:menu#categories",
+      "header-spacer"
+    ]
+  },
+
+  "vtex.menu@2.x:menu#categories": {
+    "children": [
+      "menu-item#major-appliances",
+      "menu-item#small-appliances",
+      "menu-item#electronics"
     ],
     "props": {
-        "sticky": true
-      }
+      "orientation": "horizontal"
+    }
   },
-    
-"login":{
-    "props": {
-        "showIconProfile": true,
-        "iconLabel": "Login"
-    }
-},
 
-"logo":{
+  "vtex.menu@2.x:submenu#major": {
+    "children": [
+      "menu-item#refrigerators",
+      "menu-item#ovens",
+      "menu-item#washers"
+    ],
     "props": {
-        "url": "https://appliancetheme.vteximg.com.br/assets/vtex.file-manager-graphql/images/flatflat___6081e50402943bcb11bc45a8e613aa72.png"
+      "orientation": "vertical"
     }
-},
+  },
+
+  "vtex.menu@2.x:submenu#small": {
+    "children": ["menu-item#mixers", "menu-item#toasters", "menu-item#coffee"],
+    "props": {
+      "orientation": "vertical"
+    }
+  },
+
+  "vtex.menu@2.x:submenu#electronics": {
+    "children": ["menu-item#cameras", "menu-item#laptops", "menu-item#tvs"],
+    "props": {
+      "orientation": "vertical"
+    }
+  },
+
+  "login": {
+    "props": {
+      "showIconProfile": true,
+      "iconLabel": "Login"
+    }
+  },
+
+  "logo": {
+    "props": {
+      "url": "https://appliancetheme.vteximg.com.br/assets/vtex.file-manager-graphql/images/flatflat___6081e50402943bcb11bc45a8e613aa72.png"
+    }
+  },
   "rich-text#header": {
     "props": {
       "text": "**Free Shipping on orders over $50**",
